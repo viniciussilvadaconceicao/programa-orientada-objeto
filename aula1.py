@@ -1,0 +1,1 @@
+#init é o metodo construtor da classe

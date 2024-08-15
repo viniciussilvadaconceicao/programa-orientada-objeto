@@ -7,5 +7,4 @@ class Pessoa:
     def imprimir(self):
         print('Nome:', self.nome)
         print('Idade:', self.idade)
-
 #self é o objeto que está sendo criado

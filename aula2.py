@@ -6,9 +6,15 @@ class carro :
         self.modelo = modelo
         self.marca = marca
     
-    def apresentar():
+    def apresentar(self):
         '''aqui ira apresentar'''
+        print(f'''
+    o carro é :
+    marca:{self.marca}
+    modelo:{self.modelo}
+    cor:{self.cor}
+    cambio:{self.cambio}
+    ano;{self.ano}
+''')
     
 carro1 = carro('bmw', 'x6', 'azul', 'automatico', '2024')
-
-    

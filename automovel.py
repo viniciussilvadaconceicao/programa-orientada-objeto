@@ -16,4 +16,18 @@ class carro :
     '''
 
 class Moto:
-    def
+    def __init__(self, marca, modelo, cor, ano, cilindada):
+        self.marca = marca
+        self.modelo = modelo
+        self.cor = cor
+        self.ano = ano
+        self.cilindada = cilindada
+
+    def __str__(self):
+        return f'''
+    a moto é :{self.marca}
+    modelo:{self.modelo}
+    cor:{self.cor}
+    ano:{self.ano}
+    cilindada:{self.cilindada}
+    '''

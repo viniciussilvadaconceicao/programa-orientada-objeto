@@ -5,6 +5,8 @@ class Carro :
         self.cor = cor
         self.modelo = modelo
         self.marca = marca
+        self.ls_running = False
+        self.velocidade = float(0)
 
     def __str__(self):
         return f'''
@@ -16,7 +18,7 @@ class Carro :
     '''
     def acessar(self):
         print(f'o carro {self.modelo} está sendo acessado')
-        
+
     def ligar(self):
         if not self.ls_running:
             self.ls_running = True

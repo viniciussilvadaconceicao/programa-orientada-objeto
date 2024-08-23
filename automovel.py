@@ -16,8 +16,12 @@ class Carro :
     cambio:{self.cambio}
     ano:{self.ano}
     '''
-    def acessar(self):
-        print(f'o carro {self.modelo} está sendo acessado')
+
+    def acelerar(self, velocidade_2):
+        if self.ls_running:
+            print(f'velocidade é {self.velocidade} km/h')
+        else:
+            print(f'o carro {self.modelo} está desligado')
 
     def ligar(self):
         if not self.ls_running:

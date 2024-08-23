@@ -19,6 +19,7 @@ class Carro :
 
     def acelerar(self, velocidade_2):
         if self.ls_running:
+            self.velocidade += velocidade_2
             print(f'velocidade é {self.velocidade} km/h')
         else:
             print(f'o carro {self.modelo} está desligado')

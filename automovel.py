@@ -43,6 +43,8 @@ class Moto:
         self.cor = cor
         self.ano = ano
         self.cilindada = cilindada
+        self.velocidade = float(0)
+        self.ls_running = False
 
     def __str__(self):
         return f'''
@@ -52,4 +54,10 @@ class Moto:
     ano:{self.ano}
     cilindada:{self.cilindada}
     '''
-
+    def acelerar(self, velocidade_2):
+        if not self.ls_running:
+            self.velocidade += velocidade_2
+            if velocidade_2 == float(0):
+                print(f'a moto {self.modelo} está parada')
+            else:
+                print(f'a moto {self.modelo} está a {self.velocidade} km/h')

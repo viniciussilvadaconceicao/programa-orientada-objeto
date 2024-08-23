@@ -12,7 +12,7 @@ class Carro :
         return f'''
     o carro é: {self.marca}
     modelo: {self.modelo}
-    cor:c{self.cor}
+    cor: {self.cor}
     cambio: {self.cambio}
     ano: {self.ano}
     '''

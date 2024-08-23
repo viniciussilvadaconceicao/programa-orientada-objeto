@@ -10,11 +10,11 @@ class Carro :
 
     def __str__(self):
         return f'''
-    o carro é :{self.marca}
-    modelo:{self.modelo}
-    cor:{self.cor}
-    cambio:{self.cambio}
-    ano:{self.ano}
+    o carro é: {self.marca}
+    modelo: {self.modelo}
+    cor:c{self.cor}
+    cambio: {self.cambio}
+    ano: {self.ano}
     '''
 
     def acelerar(self, velocidade_2):
@@ -48,11 +48,11 @@ class Moto:
 
     def __str__(self):
         return f'''
-    a moto é :{self.marca}
-    modelo:{self.modelo}
-    cor:{self.cor}
-    ano:{self.ano}
-    cilindada:{self.cilindada}
+    a moto é: {self.marca}
+    modelo: {self.modelo}
+    cor: {self.cor}
+    ano: {self.ano}
+    cilindada: {self.cilindada}
     '''
     def ligar(self):
         if not self.ls_running:

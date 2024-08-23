@@ -1,4 +1,4 @@
-class carro :
+class Carro :
     def __init__(self, marca, modelo, cor, cambio, ano):
         self.cambio = cambio
         self.ano = ano 
@@ -14,6 +14,20 @@ class carro :
     cambio:{self.cambio}
     ano:{self.ano}
     '''
+    def acessar(self):
+        print(f'o carro {self.modelo} está sendo acessado')
+        
+    def ligar(self):
+        if not self.ls_running:
+            self.ls_running = True
+            print(f'o carro {self.marca} está ligado')
+
+    def parar(self):
+        if self.ls_running:
+            self.ls_running = False
+            print(f'o carro {self.modelo} está parado')
+        else:
+            print(f'o carro {self.modelo} está desligado')
 
 class Moto:
     def __init__(self, marca, modelo, cor, ano, cilindada):
@@ -31,3 +45,4 @@ class Moto:
     ano:{self.ano}
     cilindada:{self.cilindada}
     '''
+

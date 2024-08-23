@@ -69,4 +69,6 @@ class Moto:
                 print(f'a moto {self.modelo} está parada')
             else:
                 print(f'a moto {self.modelo} está a {self.velocidade} km/h')
+
+   
     

@@ -56,10 +56,11 @@ class Moto:
     '''
     def ligar(self):
         if not self.ls_running:
-            self.ls_running = True
             print(f'a moto {self.modelo} está ligada')
 
     def desligar(self):
+        if not self.ls_running:
+            print(f'a moto {self.modelo} está desligada')
 
     def acelerar(self, velocidade_2):
         if not self.ls_running:

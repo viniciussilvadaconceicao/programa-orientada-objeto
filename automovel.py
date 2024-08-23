@@ -54,6 +54,13 @@ class Moto:
     ano:{self.ano}
     cilindada:{self.cilindada}
     '''
+    def ligar(self):
+        if not self.ls_running:
+            self.ls_running = True
+            print(f'a moto {self.modelo} está ligada')
+
+    def desligar(self):
+
     def acelerar(self, velocidade_2):
         if not self.ls_running:
             self.velocidade += velocidade_2
@@ -61,3 +68,4 @@ class Moto:
                 print(f'a moto {self.modelo} está parada')
             else:
                 print(f'a moto {self.modelo} está a {self.velocidade} km/h')
+    

@@ -14,8 +14,9 @@ public class Car{
     }
     // definindo os metodos
     public void start(){
-        if (lisRunning){
-            lsRunning = 
+        if (!isRunning){
+            lsRunning = True;
+            System.out.println("Carro ligado");
         }
     }
 }

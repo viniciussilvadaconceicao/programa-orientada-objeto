@@ -28,10 +28,15 @@ public class Car{
             System.out.println('Carro desligado');
         }
 
+    // dirigir o carro
     public void drive(int distancia){
         if (isRunning){
             this.velocidade += distancia;
             system.out.println("o carro esta em uma velocidade de " +distancia+ "km/h");
     }
+    }
+
+    public static void main(string[] args){
+        Car carro = new Car("fiat","uno", 2010);
     }
 }

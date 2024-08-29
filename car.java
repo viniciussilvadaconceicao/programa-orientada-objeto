@@ -13,10 +13,19 @@ public class Car{
         this.velocidade = 0;
     }
     // definindo os metodos
+    // ligar o carro
     public void start(){
         if (!isRunning){
             lsRunning = True;
             System.out.println("Carro ligado");
+        }
+    }
+
+    // desligar o carro
+    public void stop(){
+        if (isRunning){
+            isRunning = false;
+            System.out.println('Carro desligado');
         }
     }
 }

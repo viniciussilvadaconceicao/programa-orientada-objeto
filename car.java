@@ -38,5 +38,8 @@ public class Car{
 
     public static void main(string[] args){
         Car carro = new Car("fiat","uno", 2010);
+        carro.start();
+        carro.drive(50);
+        carro.stop();
     }
 }

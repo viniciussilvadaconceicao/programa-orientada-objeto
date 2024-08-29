@@ -27,5 +27,11 @@ public class Car{
             isRunning = false;
             System.out.println('Carro desligado');
         }
+
+    public void drive(int distancia){
+        if (isRunning){
+            this.velocidade += distancia;
+            system.out.println("o carro esta em uma velocidade de " +distancia+ "km/h");
+    }
     }
 }

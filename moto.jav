@@ -40,7 +40,7 @@ public Class Moto {
     }
 
     public static void main(String[] args){
-        Moto moto = new Moto("Honda", "CBR", 2015);
+        Moto moto = new Moto("Honda", "hornet", 2015);
         moto.start();
         moto.drive(100);
         moto.stop();

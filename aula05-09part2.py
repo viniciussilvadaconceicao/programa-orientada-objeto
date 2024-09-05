@@ -71,3 +71,5 @@ class Studants:
             
             else:
                 print("opção inválida, tenta novamente")
+
+Studants.main()

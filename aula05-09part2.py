@@ -48,3 +48,26 @@ class Studants:
                         print("nota adicionada")
                     else:
                         print("aluno não encontrado")
+
+            elif choice == 3:
+                if not students:
+                    print("não há alunos cadastrados")
+                    continue
+                for student in students:
+                    average_grade = student.get_average_grade()
+                    if average_grade >= 6.0:
+                        status = "provado"
+                    else:
+                        status = "reprovado"
+                    print(f"""{student.name} 
+                          média: {average_grade} 
+                          status {status}""")
+                    
+            elif choice == 4:
+                print("saindo...")
+                print("obrigado por usar o programa")
+                print("até mais")
+                break
+            
+            else:
+                print("opção inválida, tenta novamente")

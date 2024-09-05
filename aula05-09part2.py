@@ -22,10 +22,10 @@ class Studants:
         students = []
 
         while True:
-            print("1 adicionar aluno")
-            print("2 adicionar nota")
-            print("3 verificar nota")
-            print("4 sair")
+            print("1-adicionar aluno")
+            print("2-adicionar nota")
+            print("3-verificar nota")
+            print("4-sair")
             choice = int(input("escolha uma opção: "))
 
             if choice == 1:
@@ -41,13 +41,13 @@ class Studants:
                     continue
                 for idx, student in enumerate(students):
                     print(f"{idx+1} {student.name}")
-                    student_idx = int(input("escolha um aluno: "))
-                    if 0 <= student_idx < len(students):
-                        grade = float(input("nota do aluno: "))
-                        students[student_idx].add_grades(grade)
-                        print("nota adicionada")
-                    else:
-                        print("aluno não encontrado")
+                student_idx = int(input("escolha um aluno: ")) - 1
+                if 0 <= student_idx < len(students):
+                    grade = float(input("nota do aluno: "))
+                    students[student_idx].add_grade(grade)
+                    print("nota adicionada")
+                else:
+                    print("aluno não encontrado")
 
             elif choice == 3:
                 if not students:
@@ -70,6 +70,6 @@ class Studants:
                 break
             
             else:
-                print("opção inválida, tenta novamente")
+                print("opção inválida, tente novamente")
 
 Studants.main()

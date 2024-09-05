@@ -19,7 +19,7 @@ class Studants:
     
     @classmethod
     def main(cls):
-        Studants = []
+        students = []
 
         while True:
             print("1 adicionar aluno")
@@ -32,5 +32,19 @@ class Studants:
                 name = input("nome do aluno: ")
                 age = int(input("idade do aluno: "))
                 student = cls(name, age)#cria uma instância da classe
-                Studants.append(student)
+                students.append(student)
                 print(f"aluno {name} adicionado")
+            
+            elif choice == 2:
+                if not students:
+                    print("não há alunos cadastrados")
+                    continue
+                for idx, student in enumerate(students):
+                    print(f"{idx+1} {student.name}")
+                    student_idx = int(input("escolha um aluno: "))
+                    if 0 <= student_idx < len(students):
+                        grade = float(input("nota do aluno: "))
+                        students[student_idx].add_grades(grade)
+                        print("nota adicionada")
+                    else:
+                        print("aluno não encontrado")

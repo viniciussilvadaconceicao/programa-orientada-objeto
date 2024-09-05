@@ -26,4 +26,11 @@ class Studants:
             print("2 adicionar nota")
             print("3 verificar nota")
             print("4 sair")
-        
+            choice = int(input("escolha uma opção: "))
+
+            if choice == 1:
+                name = input("nome do aluno: ")
+                age = int(input("idade do aluno: "))
+                student = cls(name, age)#cria uma instância da classe
+                Studants.append(student)
+                print(f"aluno {name} adicionado")

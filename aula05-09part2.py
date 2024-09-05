@@ -13,5 +13,7 @@ class Studants:
         else:
             return sum(self.grades) / len(self.grades)
         
-    
+    @property
+    def is_passing(self):
+        return self.get_average_grade() >= 60
         

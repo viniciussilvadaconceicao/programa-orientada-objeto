@@ -39,6 +39,26 @@ class banco:
         else:
             print("Transferencia invalida. Saldo insuficiente ou valor incorreto") 
 
-@classmethod
-def criar_conta():
-          
+    @classmethod
+    def criar_conta(cls):
+        nome = input("Digite o nome do cliente: ")
+        saldo = float(input("Digite o saldo inicial: "))
+        cliente = cls(nome, saldo)
+        cliente.cadastrar_senha()
+        return cliente
+
+    @classmethod
+    def selecionar_conta(cls,cliente):
+        if len(cliente) == 0:
+            print("nenhum conta disponivel. crie uma conta primeiro.")
+            return None
+        print("===Contas disponiveis===")
+        for idx,cliente in enumerate(cliente):
+            print(f"{idx + 1}.{cliente.nome}")
+
+        opcao = int(input("Selecione a conta: "))
+        if 1 <= opcao <= len(cliente):
+            return cliente[opcao- 1]
+        else:
+            print("Conta invalida.")
+            return None

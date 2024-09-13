@@ -48,17 +48,32 @@ class banco:
         return cliente
 
     @classmethod
-    def selecionar_conta(cls,cliente):
-        if len(cliente) == 0:
+    def selecionar_conta(cls,clientes):
+        if len(clientes) == 0:
             print("nenhum conta disponivel. crie uma conta primeiro.")
             return None
         print("===Contas disponiveis===")
-        for idx,cliente in enumerate(cliente):
+        for idx,cliente in enumerate(clientes):
             print(f"{idx + 1}.{cliente.nome}")
 
         opcao = int(input("Selecione a conta: "))
-        if 1 <= opcao <= len(cliente):
-            return cliente[opcao- 1]
+        if 1 <= opcao <= len(clientes):
+            return clientes[opcao- 1]
         else:
             print("Conta invalida.")
             return None
+        
+    while True:
+        print("1-Criar conta")
+        print("2-Selecionar conta")
+        print("3-Depositar")
+        print("4-Cpnsultar saldo")
+        print("5-Apresentar dados")
+        print("6-Transferir")
+        print("7-Sair")
+        opcao = int(input("Escolha uma opção: "))
+
+        if opcao == "1":
+            novo_cliente = cls.criar_conta()
+            clientes.append(novo_cliente)
+            

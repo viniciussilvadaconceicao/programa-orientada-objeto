@@ -45,8 +45,28 @@ public class Main {
                         System.out.println(s:"indice de aluno invalido");
                     }
                     break;
-                    
+
                 case 3:
+                    if (students.isEmpty()) {
+                        System.out.println(s:"Nenhum aluno cadastrado");
+                        continue;
+                    }
+                    for (Student s : students) {
+                    double averageGrade = s.getAverageGrade();
+                    String status = averageGrade >= 60 ? "Aprovado" : "Reprovado";
+                    System.out.println(s.name + "-media" + averageGrade + "Status" + status);
+                    }
+                    break;
+
+                case 4:
+                    System.out.println(s:"Saindo...");
+                    System.out.println(s:"obrigado por usar nosso sistema");
+                    System.out.println(s:"Volte sempre!");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println(s:"Opção inválida, tente novamente");
+                    break;
 
 
         }

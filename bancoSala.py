@@ -75,5 +75,5 @@ class banco:
 
         if opcao == "1":
             novo_cliente = cls.criar_conta()
-            clientes.append(novo_cliente)
+            clientes .append(novo_cliente)
             

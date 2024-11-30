@@ -52,3 +52,29 @@ class InterfoneResidencial(Interfone):
 
 #questão 2
 #instanciando as classes e realizando interaçoes com varias opçoes de cadastro
+#subclasse 
+class InterfoneEmergencial(Interfone):
+   def __init__(self,serviço,numero_serviço):
+        super.__init__()
+        self.serviço = serviço
+        self.numero_serviço = numero_serviço
+
+@classmethod
+def metodo_cadastro(cls):
+    serviço = input("qual o nome do serviço de emergencia?" )
+    numero_servico = input("qual o numero do serviço de emergencia?" )
+    return cls(serviço,numero_servico)
+
+def ligar_para_proprietario(self):
+    print(f"ligando para o serviço de emergencia {self.serviço} no numero {self.numero_serviço}")
+
+def registra_chamada(self):
+        horario_inicio = int(input("digite o horario da chamada:"))
+        data = input("digite a data da chamada:")
+        print(f"chamada registrada em {data} as {horario_inicio}")
+
+        fim_chamada = int(input("digite o horario do fim da chamada:"))
+        print(f"chamada finalizada as {fim_chamada}")
+
+        duracao = horario_inicio- fim_chamada
+        print(f"chamada durou {duracao} minutos")

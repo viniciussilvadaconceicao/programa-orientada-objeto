@@ -78,3 +78,6 @@ def registra_chamada(self):
 
         duracao = horario_inicio- fim_chamada
         print(f"chamada durou {duracao} minutos")
+
+
+'''1:12:54 video aula poo'''
